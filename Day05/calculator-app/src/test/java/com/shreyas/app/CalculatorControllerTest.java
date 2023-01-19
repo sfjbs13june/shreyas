@@ -9,6 +9,7 @@ public class CalculatorControllerTest {
     public void addTest(){
         CalculatorController calculatorController = new CalculatorController();
         long result = calculatorController.add(10,12);
+        System.out.println(result);
         Assertions.assertEquals(result,22);
     }
 
@@ -16,6 +17,7 @@ public class CalculatorControllerTest {
     public void subTest(){
         CalculatorController calculatorController = new CalculatorController();
         long result = calculatorController.sub(10,12);
+        System.out.println(result);
         Assertions.assertEquals(result,-2);
     }
 
@@ -23,6 +25,7 @@ public class CalculatorControllerTest {
     public void mulTest(){
         CalculatorController calculatorController = new CalculatorController();
         long result = calculatorController.mul(12,13);
+        System.out.println(result);
         Assertions.assertEquals(result, 156);
     }
 
@@ -30,6 +33,7 @@ public class CalculatorControllerTest {
     public void divTest(){
         CalculatorController calculatorController = new CalculatorController();
         long result = calculatorController.div(50,10);
+        System.out.println(result);
         Assertions.assertEquals(result, 5);
     }
 }
