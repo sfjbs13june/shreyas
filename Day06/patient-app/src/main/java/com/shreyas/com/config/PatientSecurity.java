@@ -20,7 +20,7 @@ public class PatientSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("user123").password("{noop}password").roles("USER").and()
-                .withUser("admin123").password("{noop}password").roles("ADMIN");
+        auth.inMemoryAuthentication().withUser("shreyas").password("{noop}password").roles("USER").and()
+                .withUser("darkprince").password("{noop}password").roles("ADMIN");
     }
 }
