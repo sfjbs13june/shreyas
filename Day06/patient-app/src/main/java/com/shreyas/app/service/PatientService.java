@@ -1,7 +1,7 @@
-package com.shreyas.com.service;
+package com.shreyas.app.service;
 
 
-import com.shreyas.com.model.Patient;
+import com.shreyas.app.model.Patient;
 import org.springframework.stereotype.Component;
 
 @Component
