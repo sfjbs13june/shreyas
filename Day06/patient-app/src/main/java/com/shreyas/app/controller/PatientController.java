@@ -1,8 +1,8 @@
-package com.shreyas.com.controller;
+package com.shreyas.app.controller;
 
 
-import com.shreyas.com.model.Patient;
-import com.shreyas.com.service.PatientService;
+import com.shreyas.app.model.Patient;
+import com.shreyas.app.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

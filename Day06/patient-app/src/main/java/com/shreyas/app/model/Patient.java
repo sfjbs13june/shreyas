@@ -1,4 +1,4 @@
-package com.shreyas.com.model;
+package com.shreyas.app.model;
 
 import org.springframework.stereotype.Component;
 
