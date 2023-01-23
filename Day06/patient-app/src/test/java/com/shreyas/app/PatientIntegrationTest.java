@@ -94,7 +94,7 @@ public class PatientIntegrationTest {
     }
 
     @Test
-    public void testSaveStudentPostDisease() throws Exception {
+    public void testSaveStudentPostDisease() throws Exception{
         String secret = "Basic " + Base64Utils.encodeToString(("ram"+":"+"password").getBytes());
         Patient patient=new Patient("pat01","pat_test","30","Male","fever");
         ResultActions responseEntity  = mockMvc.perform(post(postUrl).header(HttpHeaders.AUTHORIZATION, secret).contentType(MediaType.APPLICATION_JSON)
@@ -107,7 +107,7 @@ public class PatientIntegrationTest {
     }
 
 
-    private String asObjectToJsonString(final Object obj) {
+    private String asObjectToJsonString(final Object obj){
         try {
             final ObjectMapper mapper = new ObjectMapper();
             final String jsonContent = mapper.writeValueAsString(obj);

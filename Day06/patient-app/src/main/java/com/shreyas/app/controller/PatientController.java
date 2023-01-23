@@ -17,7 +17,7 @@ public class PatientController {
         public Patient savePatient(@RequestBody Patient patient ){
             System.out.print(patient);
             return patient;
-        }
+         }
 
     @PutMapping("/patient/update")
     public Patient updatePatient(@RequestBody Patient patient, @RequestParam("disease") String disease ){
