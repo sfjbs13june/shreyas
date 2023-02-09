@@ -9,12 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.shreyas.app</groupId>
-	<artifactId>hospital-app</artifactId>
+	<artifactId>hospital-management-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>doctor-app</name>
+	<name>hospital-management-app</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<docker.image.prefix>shreyas100</docker.image.prefix>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -28,11 +30,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>jakarta.persistence</groupId>
-			<artifactId>jakarta.persistence-api</artifactId>
-			<version>2.2.3</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -45,15 +43,29 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+
+
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+		<plugin>
+			<groupId>com.spotify</groupId>
+			<artifactId>dockerfile-maven-plugin</artifactId>
+			<version>1.4.6</version>
+			<configuration>
+				<repository>${docker.image.prefix}/${project.artifactId}</repository>
+				<buildArgs>
+					<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+				</buildArgs>
+				<tag>${project.version}</tag>
+			</configuration>
+		</plugin>
+	</plugins>
 	</build>
 
 </project>
