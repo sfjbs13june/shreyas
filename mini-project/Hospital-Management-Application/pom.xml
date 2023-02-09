@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<docker.image.prefix>saloni2000</docker.image.prefix>
+		<docker.image.prefix>shreyas100</docker.image.prefix>
 	</properties>
 	<dependencies>
 		<dependency>
