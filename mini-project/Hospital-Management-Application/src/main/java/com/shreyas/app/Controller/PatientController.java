@@ -16,7 +16,7 @@ public class PatientController {
 
     @GetMapping("/patientappointment")
     public List<Appointment> getPatientAppointment(@RequestParam String patientName){
-        return appointmentRepository.findBypatientName(patientName);
+         return appointmentRepository.findBypatientName(patientName);
     }
 
     @PostMapping("/save")

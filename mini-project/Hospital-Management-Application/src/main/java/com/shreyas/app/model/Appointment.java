@@ -25,7 +25,7 @@ public class Appointment {
     }
 
     public String getPatientName() {
-        return patientName;
+         return patientName;
     }
 
     public void setPatientName(String patientName) {
