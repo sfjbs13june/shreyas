@@ -8,7 +8,7 @@ public class Appointment {
     private String date;
     private Prescription prescription;
 
-    public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
+    public Appointment() {
         this.appointmentId = appointmentId;
         this.patientName = patientName;
         this.doctorName = doctorName;
@@ -16,7 +16,7 @@ public class Appointment {
         this.prescription = prescription;
     }
 
-    public String getAppointmentId() {
+    public String getAppointmentId(String s) {
         return appointmentId;
     }
 
@@ -40,7 +40,7 @@ public class Appointment {
         this.doctorName = doctorName;
     }
 
-    public String getDate() {
+    public String getDate(String s) {
         return date;
     }
 
