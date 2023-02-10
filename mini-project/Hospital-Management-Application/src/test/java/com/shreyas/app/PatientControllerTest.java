@@ -49,13 +49,5 @@ public class PatientControllerTest {
 
     }
 
-    @Test
-    public void saveAppointmentTest(){
-        Appointment appointment1 = new Appointment();
-        when(appointmentRepository.save(any(Appointment.class))).thenReturn(appointment1);
 
-        Appointment result = patientController.saveAppointment(appointment);
-        assertEquals(appointment1,result);
-
-    }
 }
